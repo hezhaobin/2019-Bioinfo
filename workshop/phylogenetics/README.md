@@ -22,4 +22,4 @@ Practice phylogenetics with primate beta globin sequences, infer species tree an
     - upon further investigation, this hit is the HBG1 gene. The locus is organized as HBE1 (hemoglobin subunit epsilon 1, protein), HBG2 (hemoglobin subunit gamma 2, protein), HBG1 (hemoglobin subunit gamma 1, protein), BGLT3 (beta-globin locus transcript 3, non-protein coding, the one used as query), HBBP1 (hemoglobin subunit beta pseudogene 1, lncRNA), HBD (hemoglobin subunit delta, protein), HBB (hemoglobin subunit beta, protein)
 - Selected only 6 species, Homo sapiens (human), Gorilla gorilla (gorilla), Pan troglodytes (chimpanzee), Pan paniscus (pygmy chimpanzee), Pongo abelii (Sumatran orangutan), Pongo pygmaeus (Bornean orangutan).
 - Downloading the aligned sequences -- however, note that some of the query sequences are entire chromosome or BAC, and due to the complex of hemoglobin genes in the locus, there may be multiple hits. Need to manually edit to remove redundant ones.
--
+- Edit the sequence names to just the species names.
