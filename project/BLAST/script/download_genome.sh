@@ -6,8 +6,9 @@
 in="../data/genome_url.txt"
 while IFS= read -r line
 do
-	for file in ${line}{genomic.fna,protein.faa,rna.fna}.gz
+	for file in ${line}{genomic.fna,protein.faa,rna.fna,rna_from_genomic.fna}.gz
 	do
-		wget $file -P ../data/GenBank/ # download the files into the data folder
+		wget -nc $file -P ../data/GenBank/ # download the files into the data folder
+		                                   # -nc, --no-clobber: skip downloading a file that already exists
 	done
 done < $in

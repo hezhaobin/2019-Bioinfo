@@ -28,3 +28,13 @@ _Approach_
 
 1. The easiest way to download the assembly is to click the "Access the data->FTP Directory" link on the right
 1. On the ENA, I used the old interface and clicked the "Download->WGS_SET_FASTA" link (copy the link address and use wget)
+
+## 2019-10-17 make blast database
+
+1. concatenate all the genomic sequences into one file
+    `$ cat *_genomic.fna.gz > C_auris_clade_genomic.fna.gz`
+    turns out that gz files are concatenatable. according to https://www.biostars.org/p/81924/, the above command is equal to `$ zcat *_genomic.fna.gz | gzip -c > xxx.fna.gz`, which takes a lot longer time to run
+
+2. make blast database
+    ```bash
+    gunzip -c ../../data/uris/C_auris_B11221_V1/Cand_auris_B11221_V1_genomic.fna.gz | makeblastdb -in - -parse_seqids -dbtype nucl -title Cand_auris_B11221_V1_genomic -out Cand_auris_B11221_V1_genomic
