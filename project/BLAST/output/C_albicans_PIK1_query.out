@@ -1,0 +1,63 @@
+BLASTN 2.9.0+
+
+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb
+Miller (2000), "A greedy algorithm for aligning DNA sequences", J
+Comput Biol 2000; 7(1-2):203-14.
+
+
+
+Database: C_auris_clade_genomic
+           748 sequences; 100,558,369 total letters
+
+
+
+Query= CAAL_PIKA COORDS:Ca22chr5A_C_albicans_SC5314:395335-398205C (2871
+nucleotides)
+
+Length=2871
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 285827899275
+
+
+Query= CAAL_PIKALPHA COORDS:Ca22chr5B_C_albicans_SC5314:396435-399368C
+(2934 nucleotides)
+
+Length=2934
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 292161757050
+
+
+  Database: C_auris_clade_genomic
+    Posted date:  Oct 18, 2019  8:19 PM
+  Number of letters in database: 100,558,369
+  Number of sequences in database:  748
+
+
+
+Matrix: blastn matrix 1 -2
+Gap Penalties: Existence: 0, Extension: 2.5
