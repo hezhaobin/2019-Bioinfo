@@ -4,10 +4,8 @@ author: Bin He
 date: 2019-08-12
 ---
 
-# Notes
-## 2019-08-12 Set up
-### Final goal
+# Goal
 - Be able to blast any sequence against the assembled genomes reported in the Nat. Comm. paper
-- Also set up HMMER locally
 
-### 
+# Notes
+See README.md in the subfolders.

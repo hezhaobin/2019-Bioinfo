@@ -46,3 +46,7 @@ _Approach_
 Looking at the Muñoz paper's Figure 2, I realize that they also included the previously published first _C. auris_ genome, belonging to strain 6684, which is part of clade III. I thus added the ftp address for this strain, and remade the blastdb.
 
 Note that while there are 833 sequences in all the genomic.fna.gz files, the `makeblastdb` command reported that the program added 748 sequences. I'm not sure why there is the difference.
+
+## 2019-10-20 identify single-copy genes using the orthogroup data
+
+This part of the analysis is documented under the "phylogenetics" subfolder under "project". But some of the steps are conducted here in order to retreave the correct sequences.
