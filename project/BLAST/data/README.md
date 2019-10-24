@@ -35,7 +35,8 @@ _Approach_
 
 1. concatenate all the genomic sequences into one file
     `$ cat *[0-9]_genomic.fna.gz > C_auris_clade_genomic.fna.gz` the [0-9] excludes "*rna_from_genomic.fna.gz" from being included
-    turns out that gz files are concatenatable. according to https://www.biostars.org/p/81924/, the above command is equal to `$ zcat *_genomic.fna.gz | gzip -c > xxx.fna.gz`, which takes a lot longer time to run
+    turns out that gz files are concatenatable. according to https://www.biostars.org/p/81924/, the above command is equal to 
+    `$ zcat *_genomic.fna.gz | gzip -c > xxx.fna.gz`, which takes a lot longer time to run
 
 2. make blast database
     ```
@@ -50,3 +51,13 @@ Note that while there are 833 sequences in all the genomic.fna.gz files, the `ma
 ## 2019-10-20 identify single-copy genes using the orthogroup data
 
 This part of the analysis is documented under the "phylogenetics" subfolder under "project". But some of the steps are conducted here in order to retreave the correct sequences.
+
+## 2019-10-23 add _C. krusei_ and remake the all-in-one fasta.gz
+
+In trying to replicate the species tree, I added the genome of _C. krusei_. The genome paper was published in Cuomo et al. 2017 (doi: 10.1534/g3.117.043547). The species is identified as _Pichia kudriavzevii_ in NCBI. The latter name is the teleomorphic (sexual) state of _C. krusei_.
+
+```
+cat *[^me]_genomic.fna.gz > all_for_blast_genomic.fna.gz
+cat *rna.fna.gz > all_for_blast_rna.fna.gz
+cat *rna_from_genomic.fna.gz > all_for_blast_rna_from_genomic.fna.gz
+```

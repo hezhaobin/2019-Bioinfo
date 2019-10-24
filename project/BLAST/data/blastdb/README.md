@@ -23,3 +23,11 @@ To actually perform a blast search, use the following command
 ```
 blastn -db Cd_auris_B11221_V1_genomic -query efg1.fa -out results.out
 ```
+
+2019-10-23
+Make a few versions of the databased, from genomic, rna or rna_from_genomic
+```
+gunzip -c ../genome_seq/GenBank/all_for_blast_genomic.fna.gz | makeblastdb -in - -parse_seqids -dbtype nucl -title all_for_blast_genomic -out all_for_blast_genomic
+gunzip -c ../genome_seq/GenBank/all_for_blast_rna.fna.gz | makeblastdb -in - -parse_seqids -dbtype nucl -title all_for_blast_rna -out all_for_blast_rna
+gunzip -c ../genome_seq/GenBank/all_for_blast_rna_from_genomic.fna.gz | makeblastdb -in - -parse_seqids -dbtype nucl -title all_for_blast_rna_from_genomic -out all_for_blast_rna_from_genomic
+```

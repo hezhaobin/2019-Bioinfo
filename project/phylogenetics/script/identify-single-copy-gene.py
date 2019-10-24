@@ -6,7 +6,7 @@ Bin He
 import re
 
 infile = "../data/all-output.txt"
-outfile = "../data/single-copy-gene-list.txt"
+outfile = "../output/single-copy-gene-list.txt"
 OUT = open(outfile, 'w')
 
 with open(infile) as fp:         # read the raw file
@@ -26,4 +26,4 @@ with open(infile) as fp:         # read the raw file
                     line = next(fp)
                 if not re.search(r"1", line):
                     genename = [x for x in gene if x.startswith("Scer")] # pick out the Scer gene name
-                    OUT.write(' '.join(genename)) # print the gene name. this should be a list of one element
+                    OUT.write(','.join(genename)) # print the gene name. this should be a list of one element
