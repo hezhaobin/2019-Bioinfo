@@ -1,0 +1,20 @@
+# BLASTN 2.9.0+
+# Query: Scer|YFL039C
+# Database: ../data/blastdb/all_for_blast_rna
+# Fields: query id, subject id, % query coverage per subject, % identity, alignment length, mismatches, evalue, subject title
+# 3 hits found
+Scer|YFL039C	ref|XM_003869098.1|	99	88.839	1120	123	0.0	Candida orthopsilosis Co 90-125 Act1 actin (CORT_0D01620), partial mRNA
+Scer|YFL039C	ref|XM_029465946.1|	99	86.840	1117	143	0.0	Pichia kudriavzevii uncharacterized protein (C5L36_0C02700), partial mRNA
+Scer|YFL039C	ref|XM_025480896.1|	96	85.596	1083	156	0.0	[Candida] duobushaemulonis actin (CXQ87_002384), partial mRNA
+# BLASTN 2.9.0+
+# Query: Calb|orf19.5007
+# Database: ../data/blastdb/all_for_blast_rna
+# Fields: query id, subject id, % query coverage per subject, % identity, alignment length, mismatches, evalue, subject title
+# 6 hits found
+Calb|orf19.5007	ref|XM_003869098.1|	100	92.042	1131	87	0.0	Candida orthopsilosis Co 90-125 Act1 actin (CORT_0D01620), partial mRNA
+Calb|orf19.5007	ref|XM_029465946.1|	99	88.082	1116	131	0.0	Pichia kudriavzevii uncharacterized protein (C5L36_0C02700), partial mRNA
+Calb|orf19.5007	ref|XM_024858378.1|	96	86.624	1084	143	0.0	[Candida] pseudohaemulonii actin (C7M61_003023), partial mRNA
+Calb|orf19.5007	ref|XM_025480896.1|	96	86.255	1084	147	0.0	[Candida] duobushaemulonis actin (CXQ87_002384), partial mRNA
+Calb|orf19.5007	ref|XM_025485061.1|	96	85.332	1084	157	0.0	[Candida] haemulonis actin (CXQ85_001347), partial mRNA
+Calb|orf19.5007	ref|XM_029032556.1|	100	84.350	1131	174	0.0	[Candida] auris actin (CJI97_000486), partial mRNA
+# BLAST processed 2 queries
