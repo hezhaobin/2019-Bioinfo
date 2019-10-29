@@ -2,6 +2,7 @@
 title: "Simulate sequence evolution to demonstrate multiple hit problems"
 author: "Bin He"
 date: '2019-10-21'
+output: pdf_document
 ---
 
 # Goal
@@ -33,15 +34,50 @@ evolve <- function(seq, mu, N){
   }
   return(list(seqs, nmut, Nobs))
 }
+
+evolve2seq <- function(seq, mu, N){
+  ### evolve the sequence independently twice to simulate two contemporary lineages over N generations
+  seq1 <- seq; seq2 <- seq # same starting point for both lineages
+  seqs1 <- list(seq) # record the genotype of each generation
+  seqs2 <- list(seq) # record the genotype of each generation
+  nmut1 <- 0   # counter for the number of mutations that *occurred* in each generation in lineage 1
+  nmut2 <- 0   # counter for the number of mutations that *occurred* in each generation in lineage 2
+  Nobs <- 0   # counter for the number of *observed* mutations
+  for( i in 1:N ){
+    # for lineage 1
+    mutant1 <- mutate(seq1, mu) # perform mutation
+    seq1 <- mutant1[[1]]  # extract the mutated sequence, which will be the starting point for the next generation
+    seqs1 <- c(seqs1, list(seq1)) # record the genotype at this generation
+    nmut1 <- c(nmut1, mutant1[[2]]) # record the number of mutations that *occurred* at this generation
+    # for lineage 2
+    mutant2 <- mutate(seq2, mu) # perform mutation
+    seq2 <- mutant2[[1]]  # extract the mutated sequence, which will be the starting point for the next generation
+    seqs2 <- c(seqs2, list(seq2)) # record the genotype at this generation
+    nmut2 <- c(nmut2, mutant2[[2]]) # record the number of mutations that *occurred* at this generation    Nobs <- c(Nobs, sum(seqs[[2]] != seq)) # this records the number of *observed* mutations
+    Nobs <- c(Nobs, sum(seq1 != seq2)) # this records the number of *observed* mutations
+  }
+  return(list(nmut1, nmut2, Nobs))
+}
 ```
 
-# Set up
-```{r simulation}
+# Simulate one lineage
+```{r simulate_one_lineage}
 # starting point
-seq <- sample(c(0:3), size = 1000, replace = TRUE)
-out <- evolve(seq, mu = 0.001, N = 100000)
+seq <- sample(c(0:3), size = 500, replace = TRUE)
+out <- evolve(seq, mu = 0.001, N = 5000)
 seqs <- out[[1]]
 nmut <- out[[2]]; Nmut <- cumsum(nmut) # count the total # of mutations up to generation i
 Nobs <- out[[3]]
-plot(Nmut, Nobs, type = "l")
+plot(Nmut, Nobs, type = "l", xlab = "mutations occurred", ylab = "mutations observed")
+abline(a=0, b=1, col = "red")
+```
+# Simulate two lineages
+```{r simulate_two_lineages}
+# starting point
+seq <- sample(c(0:3), size = 500, replace = TRUE)
+out <- evolve2seq(seq, mu = 0.001, N = 5000)
+nmut1 <- cumsum(out[[1]]); nmut2 <- cumsum(out[[2]])
+Nobs <- out[[3]]
+plot(nmut1+nmut2, Nobs, type = "l", xlab = "mutations occurred", ylab = "mutations observed")
+abline(a=0, b=1, col = "red")
 ```
