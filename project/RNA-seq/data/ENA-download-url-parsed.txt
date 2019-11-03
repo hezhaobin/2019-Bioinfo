@@ -1,0 +1,49 @@
+# this is parsed from the ENA-download-url.tsv with the following code
+# awk 'BEGIN{ FS="," }FNR>1 {print ftp://$7}' ENA-download-url.tsv | tr ";" "\n" >| ENA-download-url-parsed.txt
+# and then I manually added "ftp://" to the beginning of each line
+# Bin He, 2019-11-03
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/002/SRR6900282/SRR6900282.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/003/SRR6900283/SRR6900283.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/004/SRR6900284/SRR6900284_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/004/SRR6900284/SRR6900284_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/005/SRR6900285/SRR6900285_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/005/SRR6900285/SRR6900285_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/006/SRR6900286/SRR6900286_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/006/SRR6900286/SRR6900286_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/007/SRR6900287/SRR6900287.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/008/SRR6900288/SRR6900288_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/008/SRR6900288/SRR6900288_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/009/SRR6900289/SRR6900289_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/009/SRR6900289/SRR6900289_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/000/SRR6900290/SRR6900290_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/000/SRR6900290/SRR6900290_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/001/SRR6900291/SRR6900291_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/001/SRR6900291/SRR6900291_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/002/SRR6900292/SRR6900292_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/002/SRR6900292/SRR6900292_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/003/SRR6900293/SRR6900293_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/003/SRR6900293/SRR6900293_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/004/SRR6900294/SRR6900294_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/004/SRR6900294/SRR6900294_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/005/SRR6900295/SRR6900295_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/005/SRR6900295/SRR6900295_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/006/SRR6900296/SRR6900296_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/006/SRR6900296/SRR6900296_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/007/SRR6900297/SRR6900297_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/007/SRR6900297/SRR6900297_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/008/SRR6900298/SRR6900298_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/008/SRR6900298/SRR6900298_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/009/SRR6900299/SRR6900299_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/009/SRR6900299/SRR6900299_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/000/SRR6900300/SRR6900300_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/000/SRR6900300/SRR6900300_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/001/SRR6900301/SRR6900301_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/001/SRR6900301/SRR6900301_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/002/SRR6900302/SRR6900302_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/002/SRR6900302/SRR6900302_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/003/SRR6900303/SRR6900303_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/003/SRR6900303/SRR6900303_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/004/SRR6900304/SRR6900304_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/004/SRR6900304/SRR6900304_2.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/005/SRR6900305/SRR6900305_1.fastq.gz
+ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR690/005/SRR6900305/SRR6900305_2.fastq.gz
