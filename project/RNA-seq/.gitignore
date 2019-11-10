@@ -1,0 +1,4 @@
+*.bt2
+*.gz
+script/job-log/*
+!script/job-log/README.md
