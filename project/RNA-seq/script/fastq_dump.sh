@@ -2,7 +2,8 @@
 # 2019-11-10
 # Bin He
 # Script to extract the fastq files from the .sra files downloaded by sra-tools/prefetch
-# use: qsub fastq-dump.sh -t 1-N
+# use: qsub -t 1-N fastq-dump.sh
+#      it's important to put "-t 1-N" before the script name
 
 #$ -N fastq-dump
 #$ -q BIO-INSTR

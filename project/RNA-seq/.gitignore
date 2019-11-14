@@ -2,3 +2,5 @@
 *.gz
 script/job-log/*
 !script/job-log/README.md
+output/bowtie2-aligned/*
+!output/bowtie2-aligned/README.md

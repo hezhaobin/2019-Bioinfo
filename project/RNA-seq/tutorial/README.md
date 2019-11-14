@@ -24,6 +24,7 @@ date: 2019-11-10
 
 1. Clone the repository
     ```bash
+    $ cd ~
     $ git clone https://github.com/hezhaobin/2019-Bioinfo.git
     $ cd 2019-Bioinfo/project/RNA-seq
     ```
@@ -35,14 +36,15 @@ date: 2019-11-10
 1. Decide which sequencing runs to download
     Based on the runinfo table online, you can choose a few experiments to download. They should together allow you to perform a DGE analysis. Here we use the B11210 strain treated with voriconazole at 2 hours vs untreated control as an example. The SRR accession numbers are as follows
     ```bash
-    SRR6900282 # B11210 voriconazole 2hr
-    SRR6900283 # B11210 voriconazole 2hr
-    SRR6900298 # B11210 untreated control 2hr
-    SRR6900299 # B11210 untreated control 2hr
+    SRR6900291 # B8841 voriconazole 2hr
+    SRR6900292 # B8841 voriconazole 2hr
+    SRR6900294 # B8841 untreated control 2hr
+    SRR6900295 # B8841 untreated control 2hr
     ```
     Open a text editor (vim, emacs, nano) and enter the SRR# into it. Save the file as SRR.txt (already in the `data/fastq-dump` folder)
 
 1. Download sequencing files
+    first method: ncbi sra tools
     ```bash
     module load sra-tools
     prefetch --option-file SRR.txt # note that prefetch will download files to ~/ncbi/public/sra/
@@ -52,5 +54,23 @@ date: 2019-11-10
     ```
     Note that the `prefetch` command can safely be run on the login node, which is intended "for basic tasks such as uploading data, managing files, compiling software, editing scripts, and checking on or managing your jobs" ([argon wiki](https://wiki.uiowa.edu/display/hpcdocs/Login+Node+Usage)). But the `fastq-dump` command is potentially memory intensive, and is best run by submitting a job to the compute node.
 
-1. Extract fastq files
+    second method: ftp
+    `../script/download_genome.sh`
+
+1. Extract fastq files (if doing the sra-tools route)
     As mentioned above, it is best to let the compute nodes handle the fastq file extraction step. For this I provided a template script `fastq_dump.sh` under the `script` folder
+
+1. Download reference genome sequences
+    ```bash
+    $ sh ../script/download_genome.sh
+    $ sh ../script/build_index.sh
+    ```
+
+1. Submit Bowtie2 job
+    ```bash
+    $ nano ../script/bowtie2-map-example.sh # edit the file
+    $ qsub ../script/bowtie2-map-example.sh
+    $ qstat -j JOBID
+    $ qacct -j JOBID
+    $ ls ../script/job-log/ # check the job output and error
+    ```
