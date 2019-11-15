@@ -1,4 +1,4 @@
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: Scer|YFL039C
 # Database: ../data/blastdb/all_for_blast_rna
 # Fields: query id, subject id, % query coverage per subject, % identity, alignment length, mismatches, evalue, subject title
@@ -6,7 +6,7 @@
 Scer|YFL039C	ref|XM_003869098.1|	99	88.839	1120	123	0.0	Candida orthopsilosis Co 90-125 Act1 actin (CORT_0D01620), partial mRNA
 Scer|YFL039C	ref|XM_029465946.1|	99	86.840	1117	143	0.0	Pichia kudriavzevii uncharacterized protein (C5L36_0C02700), partial mRNA
 Scer|YFL039C	ref|XM_025480896.1|	96	85.596	1083	156	0.0	[Candida] duobushaemulonis actin (CXQ87_002384), partial mRNA
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: Calb|orf19.5007
 # Database: ../data/blastdb/all_for_blast_rna
 # Fields: query id, subject id, % query coverage per subject, % identity, alignment length, mismatches, evalue, subject title

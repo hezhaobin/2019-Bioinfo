@@ -1,4 +1,4 @@
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: Scer|YFL039C
 # Database: ../data/blastdb/all_for_blast_genomic
 # Fields: query id, subject id, % query coverage per subject, % identity, alignment length, mismatches, evalue, subject title
@@ -7,7 +7,7 @@ Scer|YFL039C	ref|NC_018297.1|	99	88.839	1120	123	0.0	Candida orthopsilosis Co 90
 Scer|YFL039C	ref|NC_042508.1|	98	86.980	1106	140	0.0	Pichia kudriavzevii chromosome 3, complete sequence
 Scer|YFL039C	ref|NW_020289895.1|	99	85.702	1119	160	0.0	[Candida] duobushaemulonis strain B09383 chromosome Unknown B_B09383, whole genome shotgun sequence
 Scer|YFL039C	ref|NW_020289902.1|	99	83.735	1119	182	0.0	[Candida] haemulonis strain B11899 chromosome Unknown B_2014730914, whole genome shotgun sequence
-# BLASTN 2.9.0+
+# BLASTN 2.6.0+
 # Query: Calb|orf19.5007
 # Database: ../data/blastdb/all_for_blast_genomic
 # Fields: query id, subject id, % query coverage per subject, % identity, alignment length, mismatches, evalue, subject title
