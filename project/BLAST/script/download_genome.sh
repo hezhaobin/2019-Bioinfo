@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # 2019-10-15
 # Bin He
 # Script to download multiple genome sequences from GenBank

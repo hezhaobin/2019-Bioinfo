@@ -8,3 +8,4 @@ ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/013/735/GCF_003013735.1_Cand_pseu
 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/189/475/GCA_001189475.1_ASM118947v1/GCA_001189475.1_ASM118947v1_
 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/003/054/445/GCF_003054445.1_ASM305444v1/GCF_003054445.1_ASM305444v1_
 ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/315/875/GCF_000315875.1_ASM31587v1/GCF_000315875.1_ASM31587v1_
+ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/182/965/GCF_000182965.3_ASM18296v3/GCF_000182965.3_ASM18296v3_

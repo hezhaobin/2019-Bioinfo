@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # 2019-10-31
 # Bin He
 # Script to make blast database
